@@ -1,22 +1,25 @@
 module.exports = {
-  apps: [
+  apps : [
     {
-      name: "config-server",
-      script: "java -jar ./config-server/target/Config-Server-1.0.0.jar",
-      log_file: "./logs/config-server.log",
-      instances : 2,
+      name   : "user-service",
+      script : "java",
+      args   : "-Xmx128m -jar user-service/target/User-Service-1.0.0.jar",
+      log_file: "./logs/user-service.log",
+      instances: 2,
     },
     {
-      name: "service-registry",
-      script: "java -jar ./service-registry/target/Service-Registry-1.0.0.jar",
-      log_file: "./logs/service-registry.log",
-      instances : 2,
+      name   : "item-service",
+      script : "java",
+      args   : "-Xmx128m -jar item-service/target/Item-Service-1.0.0.jar",
+      log_file: "./logs/item-service.log",
+      instances: 2,
     },
     {
-      name: "api-gateway",
-      script: "java -jar ./api-gateway/target/Api-Gateway-1.0.0.jar",
-      log_file: "./logs/api-gateway.log",
-      instances : 2,
+      name   : "order-service",
+      script : "java",
+      args   : "-Xmx128m -jar order-service/target/Order-Service-1.0.0.jar",
+      log_file: "./logs/order-service.log",
+      instances: 2,
     }
   ]
 }
