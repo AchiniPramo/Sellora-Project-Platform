@@ -36,3 +36,6 @@ jobs:
           git pull --recurse-submodules &&
           source ~/.bashrc &&
           mvn clean package"
+
+      - name: Stop the vm-platform-seed
+        run: gcloud compute instances stop ${{ env.VM_NAME }} --zone=${{ env.ZONE }}
