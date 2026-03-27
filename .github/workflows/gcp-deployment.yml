@@ -1,9 +1,5 @@
 name: Sellora Project Platform - GCP Deployment
-
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   deploy:
@@ -14,9 +10,6 @@ jobs:
       id-token: 'write'
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v3
         with:
