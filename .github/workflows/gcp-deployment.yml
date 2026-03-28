@@ -7,6 +7,8 @@ jobs:
 
     env:
       VM_NAME: vm-platform-seed
+      INSTANCE_GROUP: mig-platform
+      INSTANCE_TEMPLATE: tmp-vm-platform-seed-v2
       REGION: asia-southeast1
       ZONE: asia-southeast1-b
       USER_NAME: achinipramodhya4
@@ -54,3 +56,14 @@ jobs:
               --source-disk=${{ env.VM_NAME }} \
               --source-disk-zone=${{ env.ZONE }} \
               --storage-location=${{ env.REGION }}
+
+      - name: Update the instance group with the new image
+        run: |
+         gcloud compute instance-groups managed rolling-action start-update ${{ env.INSTANCE_GROUP }} \
+          --region=${ { env.REGION }} \
+          --type=proactive \
+          --max-unavailable=3 \
+          --minimal-action=replace \
+          --replacement-method=recreate \
+          --max-surge=0 \
+          --version=template=projects/${{ secrets.GCP_PROJECT_ID }}/regions/${ { env.REGION }}/instanceTemplates/${{ env.INSTANCE_TEMPLATE }},name=0-1774671280110
