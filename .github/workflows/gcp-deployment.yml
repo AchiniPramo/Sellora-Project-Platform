@@ -53,4 +53,4 @@ jobs:
               --project=eca-bucket \
               --source-disk=${{ env.VM_NAME }} \
               --source-disk-zone=${{ env.ZONE }} \
-              --storage-location=${ env.REGION }}
+              --storage-location=${{ env.REGION }}
