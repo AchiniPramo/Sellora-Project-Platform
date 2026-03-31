@@ -154,9 +154,9 @@ pm2 logs
 
 ## 📚 Services Documentation
 
-* **Config Server** → Port 8888
-* **Service Registry (Eureka)** → Port 8761
-* **API Gateway** → Port 8080
+* **Config Server** → Port 9000
+* **Service Registry (Eureka)** → Port 9001
+* **API Gateway** → Port 7000
 
 ---
 
