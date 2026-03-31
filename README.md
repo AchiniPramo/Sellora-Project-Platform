@@ -2,6 +2,17 @@
 
 A modern **microservices-based e-commerce platform** built with **Spring Cloud** ecosystem. This project demonstrates enterprise-level architecture patterns including service discovery, centralized configuration management, API gateway routing, and reactive programming.
 
+## Student Information
+
+| Field          | Value |
+|----------------|---|
+| Student Name   | Achini Pramodhya |
+| Student Number | 2301692020 |
+| Slack Handle   | Achini Pramodhya |
+| Module         | ITS 2130 Enterprise Cloud Application |
+| Program        | GDSE @ IJSE |
+| GCP Project ID | eca-bucket |
+
 ---
 
 ## 📋 Table of Contents
