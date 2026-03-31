@@ -225,8 +225,3 @@ Built using Spring Cloud ecosystem.
 ---
 
 **Last Updated:** March 31, 2026
-
----
-
-💡 If you want next level:
-I can add **badges + animated banner + professional GitHub UI design (🔥 portfolio-level README)** — just tell me 👍
